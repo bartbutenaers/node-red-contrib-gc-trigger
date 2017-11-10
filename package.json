@@ -1,0 +1,25 @@
+{
+    "name"         : "node-red-contrib-gc-trigger",
+    "version"      : "0.0.1",
+    "description"  : "A Node Red node to trigger a garbage collection",
+    "dependencies": {
+    },
+    "author": {
+        "name": "Bart Butenaers"
+    },
+    "license": "Apache-2.0",
+    "keywords": [ "node-red", "garbage", "memory", "heap", "clean" ],
+    "bugs": {
+        "url": "https://github.com/bartbutenaers/node-red-contrib-gc-trigger/issues"
+    },
+    "homepage": "https://github.com/bartbutenaers/node-red-contrib-gc-trigger",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bartbutenaers/node-red-contrib-gc-trigger.git"
+    },
+    "node-red"     : {
+        "nodes": {
+            "gc-trigger": "gc-trigger.js"
+        }
+    }
+}
