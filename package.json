@@ -19,7 +19,7 @@
     },
     "node-red"     : {
         "nodes": {
-            "gc-trigger": "gc-trigger.js"
+            "gc-trigger": "gc_trigger.js"
         }
     }
 }
