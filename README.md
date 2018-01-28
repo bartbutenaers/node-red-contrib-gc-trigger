@@ -1,5 +1,5 @@
 # node-red-contrib-gc-trigger
-A Node Red node to trigger a garbage collection in V8. That V8 is Google's Javascript engine (written in C++), that is a.o. used to run Node.js.
+A Node Red node to trigger a garbage collection in NodeJs. 
 
 ## Install
 Run the following npm command in your Node-RED user directory (typically ~/.node-red):
@@ -8,6 +8,8 @@ npm install node-red-contrib-gc-trigger
 ```
 
 ## Node Usage
+When talking about garbage collections in NodeJS, the collections are executed in the V8.  That V8 is Google's Javascript engine (written in C++), that is a.o. used to run Node.js.
+
 In normal circumstances, the V8 engine will cleanup memory as soon as it is necessary.   When the memory exceeds some threshold, the V8 engine will trigger garbage collections.  This can be visualized in Node-Red using the [node-red-contrib-gc node](https://www.npmjs.com/package/node-red-contrib-gc):
 
 ![GC trigger monitor](https://raw.githubusercontent.com/bartbutenaers/node-red-contrib-gc-trigger/master/images/gc_trigger_monitor.png)
