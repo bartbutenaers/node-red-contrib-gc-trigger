@@ -14,7 +14,7 @@ In normal circumstances, the V8 engine will cleanup memory as soon as it is nece
 
 ![GC trigger monitor](https://raw.githubusercontent.com/bartbutenaers/node-red-contrib-gc-trigger/master/images/gc_trigger_monitor.png)
 
-However it might happen in exceptional cases that the garbage collection doesn't run often enough, since the V8 engine isn't aware about the real amount of memory being used.  For example when native C++ code is being called from a NodeJS program, in some conditions NodeJs doesn't take into account all the native memory that is being used.  In such conditions it might be useful to force NodeJs to trigger a garbage collection.  Keep in mind that this is in fact only a workaround, and not a real solution of the problem!
+However it might happen in exceptional cases that the garbage collection doesn't run often enough, since the V8 engine isn't aware about the real amount of memory being used.  For example when native C++ code is being called from a NodeJS program, in some conditions NodeJs doesn't take into account all the native memory that is being used.  In such conditions it might be useful to force NodeJs to trigger a garbage collection.  
 
 The garbage collection could be triggered e.g. at fixed moments in time:
 
@@ -33,3 +33,6 @@ Or you could also trigger it when the memory usage exceeds some threshold (e.g. 
 The memory consumption will look like this now:
 
 ![GC trigger monitor](https://raw.githubusercontent.com/bartbutenaers/node-red-contrib-gc-trigger/master/images/gc_trigger_threshold_graph.png)
+
+## Caution
+Keep in mind that this node is only a workaround, and not a real solution of the problem!  A major garbage collection can take e.g. 100 msec, which means you get gaps in your processing.
